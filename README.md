@@ -1,1 +1,1 @@
-# jjdressel11.github.io
+# Repository for juliadressel.com
