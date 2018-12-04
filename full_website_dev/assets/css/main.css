@@ -133,7 +133,7 @@ input, select, textarea {
 		color: inherit;
 		font-weight: 300;
 		line-height: 1.75em;
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 		text-transform: uppercase;
 	}
 
@@ -1729,19 +1729,19 @@ input, select, textarea {
 
 	header.special {
 		margin-bottom: 5em;
-		/* padding-top: 7em; */
+		padding-top: 7em;
 		position: relative;
 		text-align: center;
 	}
 
-		header.special:before, header.special:after {
+		/* header.special:before, header.special:after {
 			border-bottom: solid 1.5px;
 			border-top: solid 1.5px;
 			content: '';
 			height: 7px;
 			opacity: 0.1;
 			position: absolute;
-			top: 1.75em;
+			top: .1em;
 			width: 43%;
 		}
 
@@ -1751,7 +1751,7 @@ input, select, textarea {
 
 		header.special:after {
 			right: 0;
-		}
+		} */
 
 		header.special h2 {
 			margin-bottom: 0;
@@ -1759,7 +1759,7 @@ input, select, textarea {
 
 		header.special h2 + p {
 			margin-bottom: 0;
-			padding-top: 1.5em;
+			padding-top: 0.5em;
 		}
 
 		header.special .icon {
@@ -1783,7 +1783,7 @@ input, select, textarea {
 				left: 0;
 				position: absolute;
 				text-align: center;
-				top: 1em;
+				bottom: 1em;
 				width: 100%;
 			}
 
@@ -1797,7 +1797,7 @@ input, select, textarea {
 	}
 
 	footer.major {
-		padding-top: 3em;
+		padding-top: 1em;
 	}
 
 /* Form */
@@ -2600,7 +2600,7 @@ input, select, textarea {
 		background-size: 25em, 25em, auto, cover;
 		color: #fff;
 		cursor: default;
-		padding: 6em 0;
+		padding: 9em 0;
 		text-align: center;
 	}
 
@@ -2679,6 +2679,10 @@ input, select, textarea {
 				margin-top: 0;
 			}
 
+			#main header p {
+				text-align: center;
+			}
+
 			#main .avatar {
 				position: relative;
 				display: block;
@@ -2689,20 +2693,38 @@ input, select, textarea {
 					display: block;
 					margin: 0 auto;
 					border-radius: 100%;
-					/* box-shadow: 0 0 0 1.5em #ffffff; */
 				}
 
-				/* #main .avatar:before {
+				#main .avatar:before, .avatar:after {
+					border-bottom: solid 1.5px;
+					border-top: solid 1.5px;
 					content: '';
-					display: block;
+					height: 7px;
+					opacity: 0.1;
 					position: absolute;
 					top: 50%;
-					left: -3em;
-					width: calc(100% + 6em);
-					height: 1px;
-					z-index: -1;
-					background: #c8cccf;
-				} */
+					width: calc(25% - 80px);
+				}
+
+				#main .avatar:before {
+					left: 25%;
+				}
+
+				#main .avatar:after {
+					right: 25%;
+				}
+
+				#main .avatar {
+					opacity: 0;
+					-moz-animation: reveal-banner 1s 0.25s ease-in-out;
+					-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+					-ms-animation: reveal-banner 1s 0.25s ease-in-out;
+					animation: reveal-banner 1s 0.25s ease-in-out;
+					-moz-animation-fill-mode: forwards;
+					-webkit-animation-fill-mode: forwards;
+					-ms-animation-fill-mode: forwards;
+					animation-fill-mode: forwards;
+				}
 
 	body.index #main {
 		padding-top: 5em;
